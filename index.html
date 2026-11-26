@@ -105,5 +105,6 @@ var ac;document.addEventListener('pointerdown',function(ev){if(!ev.target.closes
 function ok(t){ts.textContent=t;ts.classList.add('on');setTimeout(function(){ts.classList.remove('on')},1800)}
 [].forEach.call(document.querySelectorAll('.cp'),function(b){b.addEventListener('click',function(){var k=b.dataset.k,t=b.dataset.m;function fb(){var a=document.createElement('textarea');a.value=k;a.style.cssText='position:fixed;opacity:0';document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove();ok(t)}
 if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(k).then(function(){ok(t)},fb)}else fb()})});})();</script>
+<script>(function(){var v=document.getElementById('cv');if(!v)return;function r(){v.playbackRate=.7}r();v.addEventListener('loadedmetadata',r);v.addEventListener('play',r)})()</script>
 </body>
 </html>
